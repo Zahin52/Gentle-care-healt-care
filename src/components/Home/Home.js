@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import Card from '../card/card'
+import Card from '../card/Servicecard'
 import './home.css'
 import SelctionContainer from './sectionContainer/selctionContainer'
 
 export default function Home() {
-   const [homeInfo, sethomeInfo] = useState([])
+   const [serviceInfo, setserviceInfo] = useState([])
+   const [docInfo, setdocInfo] = useState([])
+   const [gallaryInfo, setgallaryInfo] = useState([])
    useEffect(() => {
-      fetch('data.json')
+      fetch('serviceData.json')
          .then((res) => res.json())
-         .then((data) => sethomeInfo(data))
+         .then((data) => setserviceInfo(data))
+      fetch('doctorData.json')
+         .then((res) => res.json())
+         .then((data) => setdocInfo(data))
+      fetch('gallaryData.json')
+         .then((res) => res.json())
+         .then((data) => setgallaryInfo(data))
    }, [])
+
    return (
       <div>
          <div className="banner ">
@@ -22,36 +31,18 @@ export default function Home() {
          </div>
          <SelctionContainer
             sectionTitle="Our services"
-            data={homeInfo}
-            displayConfig={{
-               displayTitle: true,
-               displayRating: false,
-               displayInstructor: false,
-               displayFee: true,
-               displayButton: true,
-            }}
+            data={serviceInfo}
+            cardType="1"
          ></SelctionContainer>
          <SelctionContainer
             sectionTitle="Our Doctors"
-            data={homeInfo}
-            displayConfig={{
-               displayTitle: true,
-               displayRating: true,
-               displayInstructor: true,
-               displayFee: false,
-               displayButton: false,
-            }}
+            data={docInfo}
+            cardType="2"
          ></SelctionContainer>
          <SelctionContainer
-            sectionTitle="Gallay"
-            data={homeInfo}
-            displayConfig={{
-               displayTitle: false,
-               displayRating: false,
-               displayInstructor: false,
-               displayFee: false,
-               displayButton: false,
-            }}
+            sectionTitle="Gallary"
+            data={gallaryInfo}
+            cardType="3"
          ></SelctionContainer>
       </div>
    )

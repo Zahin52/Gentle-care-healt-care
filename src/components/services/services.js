@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Card from '../card/card'
+import Card from '../card/Servicecard'
 
 export default function Services() {
    const [courses, setCourses] = useState([])
