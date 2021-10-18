@@ -1,74 +1,65 @@
+
 [
   {
     "title": "Blood checkup",
-    "instructor": "Karim uddin",
-    "subject": "CSE",
+    "docinfo":{
+        "name":"Karim uddin",
+        "certificates":"He is the best doctor in the town. Best and well educated surgen",
+        "docImage":""
+    },
     "rating": 4,
     "fee": 2500,
     "image": "images/1.jpg"
   },
   {
     "title": "ECG test",
-    "instructor": "Hanif siddiqui",
-    "subject": "EEE",
+    "docinfo":{
+        "name":"Hanif siddiqui",
+        "certificates":"He is the best doctor in the town. Best and well educated surgen"
+    },
     "rating": 5,
     "fee": 1200,
     "image": "images/2.jpg"
   },
   {
     "title": "Dental checkup",
-    "instructor": "Dr. Anisul haq",
-    "subject": "CSE",
+    "docinfo":{
+        "name":"Dr. Anisul haq",
+        "certificates":"He is the best doctor in the town. Best and well educated surgen"
+    },
     "rating": 4.5,
     "fee": 1500,
     "image": "images/3.jpg"
   },
   {
     "title":"baby care",
-    "instructor": "Karim Kuddus",
-    "subject": "CSE",
+    "docinfo":{
+        "name":"Karim Kuddus",
+        "certificates":"He is the best doctor in the town. Best and well educated surgen"
+    },
     "rating": 4,
     "fee": 1200,
     "image": "images/4.jpg"
   },
   {
     "title": "Blood pressure check",
-    "instructor": "Md. Enayet Chowdhury",
-    "subject": "CSE",
+    "docinfo":{
+        "name":"Md. Enayet Chowdhury",
+        "certificates":"He is the best doctor in the town. Best and well educated surgen"
+    },
     "rating": 5,
     "fee": 1200,
     "image": "images/5.jpg"
   },
   {
     "title": "lung checkup",
-    "instructor": "Nasreen Sultana",
-    "subject": "CSE",
+    "docinfo":{
+        "name":"Nasreen Sultana",
+        "certificates":"He is the best doctor in the town. Best and well educated surgen"
+    },
     "rating": 5,
     "fee": 1600,
     "image": "images/6.jpg"
-  },
-  {
-    "title": "Customer service skills",
-    "instructor": "Farjana Yeasmin",
-    "subject": "CSE",
-    "rating": 4.9,
-    "fee": 1800,
-    "image": "images/7.jpg"
-  },
-  {
-    "title": "Health Care 101",
-    "instructor": "Sadab Hossain",
-    "subject": "Botany",
-    "rating": 5,
-    "fee": 1500,
-    "image": "images/8.jpg"
-  },
-  {
-    "title": "Writting English",
-    "instructor": "Nishat Sultana",
-    "subject": "BBA",
-    "rating": 5,
-    "fee": 1200,
-    "image": "images/9.jpg"
   }
+
 ]
