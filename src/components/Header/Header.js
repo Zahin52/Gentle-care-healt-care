@@ -1,16 +1,17 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { NavHashLink } from 'react-router-hash-link'
 
 export default function Header() {
    return (
       <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark " style={{"opacity":".7"}}>
          <div className="container">
-            <NavLink
+            <NavHashLink
                className="navbar-brand border rounded-pill px-4 py-2"
                to="/"
             >
                Gentle-Care
-            </NavLink>
+            </NavHashLink>
             <button
                className="navbar-toggler"
                type="button"
@@ -24,19 +25,19 @@ export default function Header() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                <div className="navbar-nav ms-auto">
-                  <NavLink
+                  <NavHashLink
                      className="nav-link active"
                      aria-current="page"
                      to="/"
                   >
                      Home
-                  </NavLink>
+                  </NavHashLink>
                   <NavLink className="nav-link" to="/about">
                      About
                   </NavLink>
-                  <NavLink className="nav-link" to="/services">
+                  <NavHashLink smooth className="nav-link" to="/#services">
                      Services
-                  </NavLink>
+                  </NavHashLink>
                   <NavLink className="nav-link " to="/whyus">
                      Why us?
                   </NavLink>
