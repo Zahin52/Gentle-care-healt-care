@@ -24,7 +24,7 @@ export default function Feedback() {
 
                      <div class="form-group">
                         <label for="exampleFormControlTextarea1">
-                           Example textarea
+                           Feedback
                         </label>
                         <textarea
                            class="form-control"
