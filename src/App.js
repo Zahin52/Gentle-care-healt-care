@@ -11,6 +11,8 @@ import Notfound from './components/notfound/notfound';
 import Footer from './components/Footer/Footer';
 import About from './components/about/about';
 import Whyus from './components/whyus/whyus'
+import Register from './components/register/Register';
+import Login from './components/login/Login'
 
 
 function App() {
@@ -25,11 +27,15 @@ function App() {
                <Route exact path="/about">
                   <About />
                </Route>
-               <Route exact path="/services">
+               <Route exact path="/services/:id">
                   <Services />
                </Route>
                <Route exact path="/whyus">
                   <Whyus />
+               </Route>
+               <Route exact path="/signup">
+                       <Register />
+                       <Login/>
                </Route>
                <Route path="*">
                   <Notfound />

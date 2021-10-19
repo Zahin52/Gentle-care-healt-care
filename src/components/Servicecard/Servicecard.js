@@ -6,7 +6,7 @@ import './card.css'
 
 export default function Servicecard({ info }) {
    console.log(info)
-   const { image, title, fee } = info
+   const { image, title, fee,id } = info
 
    return (
       <div className="col h-auto p-3 card-parent rounded-3">
@@ -31,7 +31,7 @@ export default function Servicecard({ info }) {
 
                   <div className="p-3">
                      <NavLink
-                        to="/services"
+                        to={`/services/${id}`}
                         className="btn btn-primary text-capitalize w-100 mt-auto rounded-pill"
                      >
                         Details

@@ -4,7 +4,10 @@ import { NavHashLink } from 'react-router-hash-link'
 
 export default function Header() {
    return (
-      <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark " style={{"opacity":".7"}}>
+      <nav
+         className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark "
+         style={{ opacity: '.7' }}
+      >
          <div className="container">
             <NavHashLink
                className="navbar-brand border rounded-pill px-4 py-2"
@@ -24,7 +27,7 @@ export default function Header() {
                <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-               <div className="navbar-nav ms-auto">
+               <div className="navbar-nav ms-auto d-flex justify-content-center align-items-center">
                   <NavHashLink
                      className="nav-link active"
                      aria-current="page"
@@ -40,6 +43,9 @@ export default function Header() {
                   </NavHashLink>
                   <NavLink className="nav-link " to="/whyus">
                      Why us?
+                  </NavLink>
+                  <NavLink className="nav-link " to="/signup">
+                     <button className="btn btn-primary">Register</button>
                   </NavLink>
                </div>
             </div>

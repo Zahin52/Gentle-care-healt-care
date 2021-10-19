@@ -1,5 +1,5 @@
 import React from 'react'
-import ServiceCard from '../../card/Servicecard'
+import ServiceCard from '../../Servicecard/Servicecard'
 import DoctorCard from '../../doctorCard/doctorCard'
 import GallaryCard from '../../gallaryCard/GallaryCard'
 
@@ -18,7 +18,7 @@ export default function selctionContainer({ sectionTitle, data, cardType }) {
             <div id="services" className=" px-4">
                <div className="row row-cols-1 row-cols-lg-3 g-3  mx-auto justify-content-center my-4">
                   {data.map((data, i) => (
-                     <ServiceCard info={data} />
+                     <ServiceCard key={i} info={data} />
                   ))}
                </div>
             </div>
@@ -39,7 +39,7 @@ export default function selctionContainer({ sectionTitle, data, cardType }) {
             <div id="services" className=" px-4">
                <div className="row row-cols-1 row-cols-lg-3 g-3  mx-auto justify-content-center my-4">
                   {data.map((data, i) => (
-                     <DoctorCard info={data} />
+                     <DoctorCard key={i} info={data} />
                   ))}
                </div>
             </div>
@@ -60,7 +60,7 @@ export default function selctionContainer({ sectionTitle, data, cardType }) {
             <div id="services" className=" px-4">
                <div className="row row-cols-1 row-cols-lg-3 g-3  mx-auto justify-content-center my-4">
                   {data.map((data, i) => (
-                     <GallaryCard info={data} />
+                     <GallaryCard key={i} info={data} />
                   ))}
                </div>
             </div>

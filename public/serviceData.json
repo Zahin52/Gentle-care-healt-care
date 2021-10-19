@@ -3,31 +3,43 @@
   {
     "title": "Blood checkup",
     "fee": 2500,
+    "details":"Checking the blood is good for health",
+    "id":"1",
     "image": "images/1.jpg"
   },
   {
     "title": "ECG test",
     "fee": 1200,
+    "details":"Ecg test is high class",
+    "id":"2",
     "image": "images/2.jpg"
   },
   {
     "title": "Dental checkup",
     "fee": 1500,
+    "details":"Check your tooth daily",
+    "id":"3",
     "image": "images/3.jpg"
   },
   {
     "title":"baby care",
     "fee": 1200,
+    "details":"care your baby",
+    "id":"4",
     "image": "images/4.jpg"
   },
   {
     "title": "Blood pressure check",
     "fee": 1200,
+    "details":"Blood pressure",
+    "id":"5",
     "image": "images/5.jpg"
   },
   {
     "title": "lung checkup",
     "fee": 1600,
+    "details":"lung checkup",
+    "id":"6",
     "image": "images/6.jpg"
   }
 
