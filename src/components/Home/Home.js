@@ -3,6 +3,7 @@ import Card from '../Servicecard/Servicecard'
 import './home.css'
 import SelctionContainer from './sectionContainer/selctionContainer'
 
+
 export default function Home() {
    const [serviceInfo, setserviceInfo] = useState([])
    const [docInfo, setdocInfo] = useState([])

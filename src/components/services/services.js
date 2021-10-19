@@ -22,8 +22,17 @@ export default function Services() {
             </h1>
          </div>
          <div className=" " style={{ 'min-height': '100vh' }}>
-            <div className="row row-cols-1 row-cols-lg-3  mx-auto justify-content-center my-4 text-capitalize">
-                   {detail.length && detail[0]['details']}
+            <div class="card text-center">
+               <div class="card-header">
+                  {detail.length && detail[0]['title']}
+               </div>
+               <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">
+                     {detail.length && detail[0]['details']}
+                  </p>
+               </div>
+               <div class="card-footer text-muted">Updated : 2 days ago</div>
             </div>
          </div>
       </div>

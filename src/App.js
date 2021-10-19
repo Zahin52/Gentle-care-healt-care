@@ -35,7 +35,9 @@ function App() {
                </Route>
                <Route exact path="/signup">
                        <Register />
-                       <Login/>
+               </Route>
+               <Route exact path="/login">
+                       <Login />
                </Route>
                <Route path="*">
                   <Notfound />
