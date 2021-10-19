@@ -46,7 +46,8 @@ export default function Header() {
                   </NavHashLink>
                   <NavLink className="nav-link " to="/whyus">
                      Why us?
-                  </NavLink>
+                       </NavLink>
+                       {users?.email && <span className="text-white p-2 border rounded-pill">{users.displayName}</span>}
                   {users?.email ? (
                      <NavLink className="nav-link " to="/Login">
                         <button onClick={logout} className="btn btn-primary">

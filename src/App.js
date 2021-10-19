@@ -14,6 +14,7 @@ import Whyus from './components/whyus/whyus'
 import Register from './components/register/Register'
 import Login from './components/login/Login'
 import AuthProvider from './context/authProvider'
+import PrivateRoute from './components/privateRoute/PrivateRoute';
 
 function App() {
    return (
@@ -28,9 +29,9 @@ function App() {
                   <Route exact path="/about">
                      <About />
                   </Route>
-                  <Route exact path="/services/:id">
+                  <PrivateRoute exact path="/services/:id">
                      <Services />
-                  </Route>
+                  </PrivateRoute>
                   <Route exact path="/whyus">
                      <Whyus />
                   </Route>

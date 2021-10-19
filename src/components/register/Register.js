@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './register.css'
 import { NavLink } from 'react-router-dom'
+import useAuth from '../../context/useAuth';
 
 export default function Register() {
    const [name, setName] = useState('')
@@ -10,6 +11,7 @@ export default function Register() {
       e.preventDefault()
       console.log({ name, email, pass })
    }
+    const { signInUsingGoogle } = useAuth()
    return (
       <div className="form-wrapper">
          <div className="main-w3layouts wrapper">
@@ -48,10 +50,15 @@ export default function Register() {
                         value="SIGNUP"
                      />
                   </form>
-                  <p className="text-white">Login with google </p>
+                  <p className="text-white">Register with google </p>
                   <ul className="social-network social-circle d-flex justify-content-center">
                      <li>
-                        <NavLink to="/" className="icoGoogle" title="Google +">
+                        <NavLink
+                           onClick={signInUsingGoogle}
+                           to="/"
+                           className="icoGoogle"
+                           title="Google +"
+                        >
                            <i className="fa fa-google-plus"></i>
                         </NavLink>
                      </li>

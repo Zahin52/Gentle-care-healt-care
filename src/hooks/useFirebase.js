@@ -10,14 +10,19 @@ import initializationAuthentication from '../firebase/firebase.init'
 
 initializationAuthentication()
 const useFirebase = () => {
-   const [users, setUser] = useState({})
+    const [users, setUser] = useState({})
+    const [isLoading , setIsloading]= useState(true)
    const auth = getAuth()
-   const signInUsingGoogle = () => {
+    const signInUsingGoogle = () => {
+       setIsloading(true)
       const GoogleProvider = new GoogleAuthProvider()
-      signInWithPopup(auth, GoogleProvider).then((result) => {
-          setUser(result.user)
-          console.log(users);
-      }).catch((e)=> console.log(e))
+      signInWithPopup(auth, GoogleProvider)
+         .then((result) => {
+            setUser(result.user)
+            console.log(users)
+         })
+         .catch((e) => console.log(e))
+         .finally(() => setIsloading(false))
    }
    useEffect(() => {
       const unsubscribed = onAuthStateChanged(auth, (user) => {
@@ -26,19 +31,24 @@ const useFirebase = () => {
          } else {
             setUser({})
          }
+          setIsloading(false)
       })
       return () => unsubscribed
    }, [])
 
-   const logout = () => {
-      signOut(auth).then((res) => {
-         setUser({})
-      })
+    const logout = () => {
+       setIsloading(true)
+      signOut(auth)
+         .then((res) => {
+            setUser({})
+         })
+         .finally(() => setIsloading(false))
    }
    return {
       users,
       signInUsingGoogle,
-      logout
+       logout,
+      isLoading
    }
 }
 
