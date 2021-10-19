@@ -18,7 +18,7 @@ export default function Services() {
       <div className="container">
          <div>
             <h1 className="fw-bold text-capitalize mt-5 mb-4 text-center text-white opacity-75 bg-secondary px-4 py-2 rounded-pill border">
-               All details
+               details
             </h1>
          </div>
          <div className=" " style={{ 'min-height': '100vh' }}>

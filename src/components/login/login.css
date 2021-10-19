@@ -18,7 +18,7 @@
     margin-top: 5%;
 }
 
-.box input[type="text"],
+.box input[type="email"],
 .box input[type="password"] {
     border: 0;
     background: none;
@@ -40,7 +40,7 @@
     font-weight: 500
 }
 
-.box input[type="text"]:focus,
+.box input[type="email"]:focus,
 .box input[type="password"]:focus {
     width: 300px;
     border-color: #2ecc71
