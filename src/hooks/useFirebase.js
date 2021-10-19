@@ -10,13 +10,14 @@ import initializationAuthentication from '../firebase/firebase.init'
 
 initializationAuthentication()
 const useFirebase = () => {
-   const [user, setUser] = useState({})
+   const [users, setUser] = useState({})
    const auth = getAuth()
    const signInUsingGoogle = () => {
       const GoogleProvider = new GoogleAuthProvider()
       signInWithPopup(auth, GoogleProvider).then((result) => {
-         setUser(result.user)
-      })
+          setUser(result.user)
+          console.log(users);
+      }).catch((e)=> console.log(e))
    }
    useEffect(() => {
       const unsubscribed = onAuthStateChanged(auth, (user) => {
@@ -35,9 +36,9 @@ const useFirebase = () => {
       })
    }
    return {
-      user,
+      users,
       signInUsingGoogle,
-      logout,
+      logout
    }
 }
 

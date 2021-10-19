@@ -2,6 +2,7 @@ import React from 'react'
 import './login.css'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
+import useAuth from '../../context/useAuth';
 export default function Login() {
    const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
@@ -9,6 +10,7 @@ export default function Login() {
         e.preventDefault()
         console.log({ email, pass })
      }
+    const { signInUsingGoogle } = useAuth()
    return (
       <div className=" mx-auto">
          <div className="d-flex justify-content-center">
@@ -42,8 +44,9 @@ export default function Login() {
                         <p className="text-white">Login with google </p>
                         <ul className="social-network social-circle">
                            <li>
-                              <NavLink
-                                 to="/"
+                                       <NavLink
+                                           to="/"
+                                 onClick={signInUsingGoogle}
                                  className="icoGoogle"
                                  title="Google +"
                               >

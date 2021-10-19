@@ -13,12 +13,12 @@ import About from './components/about/about'
 import Whyus from './components/whyus/whyus'
 import Register from './components/register/Register'
 import Login from './components/login/Login'
-import authProvider from './context/authProvider'
+import AuthProvider from './context/authProvider'
 
 function App() {
    return (
       <div className="App">
-         <authProvider>
+         <AuthProvider>
             <Router>
                <Header />
                <Switch>
@@ -46,7 +46,7 @@ function App() {
                </Switch>
                <Footer />
             </Router>
-         </authProvider>
+         </AuthProvider>
       </div>
    )
 }

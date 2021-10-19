@@ -4,8 +4,8 @@ import { NavHashLink } from 'react-router-hash-link'
 import useAuth from '../../context/useAuth'
 
 export default function Header() {
-//    const { user, logout } = useAuth()
-    console.log(useAuth());
+   const { users, logout } = useAuth()
+    console.log(users);
    return (
       <nav
          className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark "
@@ -47,13 +47,15 @@ export default function Header() {
                   <NavLink className="nav-link " to="/whyus">
                      Why us?
                   </NavLink>
-                  {1 ? (
-                     <NavLink className="nav-link " to="/signup">
-                        <button className="btn btn-primary">Register</button>
+                  {users?.email ? (
+                     <NavLink className="nav-link " to="/Login">
+                        <button onClick={logout} className="btn btn-primary">
+                           logout
+                        </button>
                      </NavLink>
                   ) : (
                      <NavLink className="nav-link " to="/signup">
-                        <button className="btn btn-primary">Logout</button>
+                        <button className="btn btn-primary">Register</button>
                      </NavLink>
                   )}
                </div>
