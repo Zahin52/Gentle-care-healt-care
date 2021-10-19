@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { NavHashLink } from 'react-router-hash-link';
+import { NavHashLink } from 'react-router-hash-link'
 
 export default function Footer() {
    return (
@@ -43,19 +43,28 @@ export default function Footer() {
                <div>
                   <h1>Contact us</h1>
                   <div>
-                     <span className="mx-2">
+                     <a
+                        href="https://gentle-care.web.app/"
+                        className="mx-2 text-white"
+                     >
                         <i class="fa fa-facebook-square fa-2x"></i>
-                     </span>
-                     <span className="mx-2">
+                     </a>
+                     <a
+                        href="https://gentle-care.web.app/"
+                        className="mx-2 text-white"
+                     >
                         <i class="fa fa-github-square fa-2x"></i>
-                     </span>
-                     <span className="mx-2">
+                     </a>
+                     <a
+                        href="https://gentle-care.web.app/"
+                        className="mx-2 text-white"
+                     >
                         <i class="fa fa-twitter-square fa-2x"></i>
-                     </span>
+                     </a>
                   </div>
                </div>
             </div>
-            <p>Copyright &copy;2021 skill booster</p>
+            <p>Copyright &copy;2021 Gentle Care</p>
          </div>
       </div>
    )

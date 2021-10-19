@@ -27,7 +27,7 @@ export default function Services() {
                   {detail.length && detail[0]['title']}
                </div>
                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
+                  <h5 class="card-title">How we do the treatment</h5>
                   <p class="card-text">
                      {detail.length && detail[0]['details']}
                   </p>

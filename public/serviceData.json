@@ -17,28 +17,28 @@
   {
     "title": "Dental checkup",
     "fee": 1500,
-    "details":"Check your tooth daily",
+    "details":"Check your tooth daily with great care",
     "id":"3",
     "image": "images/3.jpg"
   },
   {
     "title":"baby care",
     "fee": 1200,
-    "details":"care your baby",
+    "details":"care your baby like ours",
     "id":"4",
     "image": "images/4.jpg"
   },
   {
     "title": "Blood pressure check",
     "fee": 1200,
-    "details":"Blood pressure",
+    "details":"Blood pressure checkup daily",
     "id":"5",
     "image": "images/5.jpg"
   },
   {
     "title": "lung checkup",
     "fee": 1600,
-    "details":"lung checkup",
+    "details":"lung checkup daily",
     "id":"6",
     "image": "images/6.jpg"
   }
