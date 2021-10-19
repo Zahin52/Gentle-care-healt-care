@@ -7,10 +7,11 @@ export default function Login() {
    const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
      const handleLogin = (e) => {
-        e.preventDefault()
+         e.preventDefault()
+         login({email,pass})
         console.log({ email, pass })
      }
-    const { signInUsingGoogle } = useAuth()
+    const { signInUsingGoogle ,login } = useAuth()
    return (
       <div className=" mx-auto">
          <div className="d-flex justify-content-center">
@@ -31,6 +32,7 @@ export default function Login() {
                         type="password"
                         placeholder="Password"
                         required
+                        minlength="6"
                         onChange={(event) => setPass(event.target.value)}
                      />
                      <input
@@ -44,8 +46,8 @@ export default function Login() {
                         <p className="text-white">Login with google </p>
                         <ul className="social-network social-circle">
                            <li>
-                                       <NavLink
-                                           to="/"
+                              <NavLink
+                                 to="/"
                                  onClick={signInUsingGoogle}
                                  className="icoGoogle"
                                  title="Google +"

@@ -8,10 +8,11 @@ export default function Register() {
    const [email, setEmail] = useState('')
    const [pass, setPass] = useState('')
    const handleSubmit = (e) => {
-      e.preventDefault()
+       e.preventDefault()
+       createNewUser({ name, email, pass })
       console.log({ name, email, pass })
    }
-    const { signInUsingGoogle } = useAuth()
+    const { signInUsingGoogle, createNewUser } = useAuth()
    return (
       <div className="form-wrapper">
          <div className="main-w3layouts wrapper">
@@ -64,7 +65,7 @@ export default function Register() {
                      </li>
                   </ul>
                   <p>
-                     Don't have an Account?{' '}
+                     Have an Account?{' '}
                      <NavLink to="/login"> Login Now!</NavLink>
                   </p>
                </div>

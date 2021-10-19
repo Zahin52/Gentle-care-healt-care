@@ -38,14 +38,14 @@ export default function Header() {
                   >
                      Home
                   </NavHashLink>
-                  <NavLink className="nav-link" to="/about">
-                     About
+                  <NavLink className="nav-link" to="/appointment">
+                     Appointment
                   </NavLink>
                   <NavHashLink smooth className="nav-link" to="/#services">
                      Services
                   </NavHashLink>
-                  <NavLink className="nav-link " to="/whyus">
-                     Why us?
+                  <NavLink className="nav-link " to="/feedback">
+                     Feedback
                        </NavLink>
                        {users?.email && <span className="text-white p-2 border rounded-pill">{users.displayName}</span>}
                   {users?.email ? (

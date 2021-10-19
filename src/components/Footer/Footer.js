@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Services from '../services/services'
+import { NavHashLink } from 'react-router-hash-link';
 
 export default function Footer() {
    return (
@@ -23,18 +23,19 @@ export default function Footer() {
                      <div>
                         <NavLink
                            className="text-decoration-none text-white"
-                           to="/about"
+                           to="/appointment"
                         >
-                           About
+                           Appointment
                         </NavLink>
                      </div>
                      <div>
-                        <NavLink
-                           className="text-decoration-none text-white"
-                           to="/services"
+                        <NavHashLink
+                           smooth
+                           className="nav-link text-white"
+                           to="/#services"
                         >
                            Services
-                        </NavLink>
+                        </NavHashLink>
                      </div>
                   </ul>
                </div>

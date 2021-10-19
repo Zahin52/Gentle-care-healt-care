@@ -9,8 +9,8 @@ import Home from './components/Home/Home'
 import Services from './components/services/services'
 import Notfound from './components/notfound/notfound'
 import Footer from './components/Footer/Footer'
-import About from './components/about/about'
-import Whyus from './components/whyus/whyus'
+import Appointment from './components/Appointment/Appointment'
+import Feedback from './components/feedback/Feedback'
 import Register from './components/register/Register'
 import Login from './components/login/Login'
 import AuthProvider from './context/authProvider'
@@ -26,15 +26,15 @@ function App() {
                   <Route exact path="/">
                      <Home />
                   </Route>
-                  <Route exact path="/about">
-                     <About />
-                  </Route>
+                  <PrivateRoute exact path="/appointment">
+                     <Appointment />
+                  </PrivateRoute>
                   <PrivateRoute exact path="/services/:id">
                      <Services />
                   </PrivateRoute>
-                  <Route exact path="/whyus">
-                     <Whyus />
-                  </Route>
+                  <PrivateRoute exact path="/feedback">
+                     <Feedback />
+                  </PrivateRoute>
                   <Route exact path="/signup">
                      <Register />
                   </Route>
