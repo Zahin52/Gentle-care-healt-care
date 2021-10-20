@@ -6,7 +6,7 @@ import './card.css'
 
 export default function Servicecard({ info }) {
    console.log(info)
-   const { image, title, fee,id } = info
+   const { image, title, fee,id,details } = info
 
    return (
       <div className="col h-auto p-3 card-parent rounded-3">
@@ -22,6 +22,12 @@ export default function Servicecard({ info }) {
                   >
                      {title}
                   </h5>
+                  <small
+                     className="card-title text-secondary fw-bold p-3"
+                     style={{ 'min-height': '3.5rem' }}
+                  >
+                     {details}
+                  </small>
 
                   <div className="card-text ">
                      <div className=" text-secondary p-3">

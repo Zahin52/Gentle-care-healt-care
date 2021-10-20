@@ -9,11 +9,12 @@ export default function Services() {
          .then((res) => res.json())
          .then((data) => setdetails(data))
    }, [])
-    console.log(details);
-    const { id } = useParams()
-    console.log("id id ", id);
-    let detail = details.filter((item => (item.id===id)))
-    console.log(detail)
+   console.log(details)
+   const { id } = useParams()
+   console.log('id id ', id)
+   let detail = details.filter((item) => item.id === id)
+   const info = detail[0]
+//    console.log(detail)
    return (
       <div className="container">
          <div>
@@ -23,14 +24,14 @@ export default function Services() {
          </div>
          <div className=" " style={{ 'min-height': '100vh' }}>
             <div class="card text-center">
-               <div class="card-header">
-                  {detail.length && detail[0]['title']}
-               </div>
+               <div class="card-header fs-2">{detail.length && info['title']}</div>
                <div class="card-body">
-                  <h5 class="card-title">How we do the treatment</h5>
-                  <p class="card-text">
-                     {detail.length && detail[0]['details']}
-                  </p>
+                  <div>
+                     <img src={detail.length && "/"+info['image']} alt="" />
+                  </div>
+                  <div class="card-text fs-3">
+                     {detail.length && info['Fulldetails']}
+                  </div>
                </div>
                <div class="card-footer text-muted">Updated : 2 days ago</div>
             </div>
