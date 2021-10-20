@@ -17,15 +17,7 @@ export default function About() {
                            placeholder="Email"
                         />
                      </div>
-                     <div className="form-group col">
-                        <label for="inputPassword4">Password</label>
-                        <input
-                           type="password"
-                           className="form-control w-100 border"
-                           id="inputPassword4"
-                           placeholder="Password"
-                        />
-                     </div>
+                     
                   </div>
                   <div className="form-group">
                      <label for="inputAddress">Address</label>
@@ -55,7 +47,7 @@ export default function About() {
                         />
                      </div>
                      <div className="form-group col">
-                        <label for="inputState">State</label>
+                        <label for="inputState">Time</label>
                         <select id="inputState" className="form-control">
                            <option selected>Choose...</option>
                            <option>10 AM</option>
