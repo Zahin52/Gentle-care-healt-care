@@ -56,7 +56,7 @@ export default function Header() {
                      </NavLink>
                   ) : (
                      <NavLink className="nav-link " to="/signup">
-                        <button className="btn btn-primary">Register</button>
+                        <button className="btn btn-primary">Register / Login</button>
                      </NavLink>
                   )}
                </div>
