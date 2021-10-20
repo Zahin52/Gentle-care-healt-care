@@ -12,15 +12,7 @@ export default function Register() {
    const location = useLocation()
    const redirect = location.state?.from || '/'
    const { signInUsingGoogle, createNewUser,setUserName } = useAuth()
-   //    const handleSubmit = (e) => {
-   //       e.preventDefault()
-   //       if (pass.length < 6) {
-   //          setError('Password must be more than 6 characters')
-   //          return
-   //       }
-   //       createNewUser({ name, email, pass })
-   //       console.log({ name, email, pass })
-   //    }
+   
 
    const handleCreateUser = (e) => {
       e.preventDefault()

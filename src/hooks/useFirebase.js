@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react'
 
 import initializationAuthentication from '../firebase/firebase.init'
 import { updateProfile } from '@firebase/auth'
-import { useHistory } from 'react-router-dom';
+
 
 initializationAuthentication()
 const useFirebase = () => {
