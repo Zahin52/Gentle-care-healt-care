@@ -1,4 +1,4 @@
-# Getle care
+# Gentle care
 ## _The best Health care in Bangladesh_
 
 
