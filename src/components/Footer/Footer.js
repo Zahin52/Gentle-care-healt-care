@@ -6,7 +6,7 @@ export default function Footer() {
    return (
       <div className="bg-dark text-white p-4" style={{ 'z-index': '10' }}>
          <div className="container text-center">
-            <div className="d-flex justify-content-between  mb-3">
+            <div className="d-flex flex-column flex-sm-row justify-content-between  mb-3">
                <div className="">
                   <ul
                      style={{ 'list-style-type': 'none' }}

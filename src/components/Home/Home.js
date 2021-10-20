@@ -24,9 +24,11 @@ export default function Home() {
       <div>
          <div className="banner ">
             <div className="heading d-flex justify-content-center align-items-center flex-column">
-               <h1 className="text-capitalize">Welcome to the Gentle Care</h1>
-               <p className="text-capitalize">
-                  Your Health care develompemt gym
+               <h1 className="text-capitalize text-center">
+                  Welcome to the Gentle Care
+               </h1>
+               <p className="text-capitalize text-center">
+                  Your Health care develompemt home
                </p>
             </div>
          </div>
