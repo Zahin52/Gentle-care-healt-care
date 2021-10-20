@@ -49,7 +49,7 @@ export default function Header() {
                        </NavLink>
                        {users?.email && <span className="text-white p-2 border rounded-pill">{users.displayName}</span>}
                   {users?.email ? (
-                     <NavLink className="nav-link " to="/Login">
+                     <NavLink className="nav-link " to="/">
                         <button onClick={logout} className="btn btn-primary">
                            logout
                         </button>

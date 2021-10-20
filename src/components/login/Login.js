@@ -1,17 +1,35 @@
 import React from 'react'
 import './login.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation, useHistory } from 'react-router-dom'
 import { useState } from 'react'
-import useAuth from '../../context/useAuth';
+import useAuth from '../../context/useAuth'
 export default function Login() {
    const [email, setEmail] = useState('')
-    const [pass, setPass] = useState('')
-     const handleLogin = (e) => {
-         e.preventDefault()
-         login({email,pass})
-        console.log({ email, pass })
-     }
-    const { signInUsingGoogle ,login } = useAuth()
+   const [pass, setPass] = useState('')
+   const [error, setError] = useState('')
+   const history = useHistory()
+   const location = useLocation()
+   const redirect = location.state?.from || '/'
+   const { signInUsingGoogle, login } = useAuth()
+   const handleGoogleLogin = () => {
+      signInUsingGoogle()
+         .then((result) => {
+            history.push(redirect)
+         })
+         .catch((e) => setError(e.message))
+   }
+   const handleLogin = (e) => {
+      e.preventDefault()
+      login({ email, pass })
+         .then((result) => {
+            history.push(redirect)
+         })
+         .catch((error) => {
+            setError(error.message)
+         })
+         .finally(() => {})
+      console.log({ email, pass })
+   }
    return (
       <div className=" mx-auto">
          <div className="d-flex justify-content-center">
@@ -35,25 +53,25 @@ export default function Login() {
                         minlength="6"
                         onChange={(event) => setPass(event.target.value)}
                      />
+                     <p className="text-white">{error}</p>
                      <input
                         type="submit"
                         onClick={(e) => handleLogin(e)}
                         name=""
                         value="Login"
-                        href="#"
                      />
                      <div className="col-md-12">
                         <p className="text-white">Login with google </p>
                         <ul className="social-network social-circle">
                            <li>
-                              <NavLink
-                                 to="/"
-                                 onClick={signInUsingGoogle}
+                              <a
+                                 onClick={handleGoogleLogin}
                                  className="icoGoogle"
                                  title="Google +"
+                                 href
                               >
                                  <i className="fa fa-google-plus"></i>
-                              </NavLink>
+                              </a>
                            </li>
                         </ul>
                      </div>
