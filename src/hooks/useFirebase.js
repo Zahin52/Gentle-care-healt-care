@@ -5,13 +5,13 @@ import {
    signOut,
    createUserWithEmailAndPassword,
    onAuthStateChanged,
-   updateProfile,
    signInWithEmailAndPassword,
 } from 'firebase/auth'
-import { React, useState, useEffect } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 import initializationAuthentication from '../firebase/firebase.init'
+import { updateProfile } from '@firebase/auth'
+import { useHistory } from 'react-router-dom';
 
 initializationAuthentication()
 const useFirebase = () => {
@@ -22,7 +22,6 @@ const useFirebase = () => {
       setIsloading(true)
       const GoogleProvider = new GoogleAuthProvider()
       return signInWithPopup(auth, GoogleProvider)
-         
    }
    useEffect(() => {
       const unsubscribed = onAuthStateChanged(auth, (user) => {
@@ -44,17 +43,27 @@ const useFirebase = () => {
          })
          .finally(() => setIsloading(false))
    }
-   
-   const createNewUser = ({ email, pass}) => {
+   const setUserName = (name,history) => {
       setIsloading(true)
-      return createUserWithEmailAndPassword(auth, email, pass)
-        
+      updateProfile(auth.currentUser, {
+         displayName: name,
+      })
+         .then(() => {
+             history.push("/")
+             setIsloading(false)
+         })
+         .catch((e) => console.log(e))
+   }
+
+   const createNewUser = ({ email, pass }) => {
+      return createUserWithEmailAndPassword(auth, email, pass).finally(() =>
+         setIsloading(false),
+      )
    }
    const login = ({ email, pass }) => {
       setIsloading(true)
       console.log(email, pass)
       return signInWithEmailAndPassword(auth, email, pass)
-         
    }
    return {
       users,
@@ -62,7 +71,8 @@ const useFirebase = () => {
       logout,
       isLoading,
       createNewUser,
-      login,
+       login,
+      setUserName
    }
 }
 

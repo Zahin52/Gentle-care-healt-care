@@ -11,7 +11,7 @@ export default function Register() {
    const history = useHistory()
    const location = useLocation()
    const redirect = location.state?.from || '/'
-   const { signInUsingGoogle, createNewUser } = useAuth()
+   const { signInUsingGoogle, createNewUser,setUserName } = useAuth()
    //    const handleSubmit = (e) => {
    //       e.preventDefault()
    //       if (pass.length < 6) {
@@ -21,30 +21,16 @@ export default function Register() {
    //       createNewUser({ name, email, pass })
    //       console.log({ name, email, pass })
    //    }
-   const setUserName = (name) => {
-      const auth = getAuth()
-      updateProfile(auth.currentUser, {
-         displayName: name,
-      })
-         .then(() => {
-            history.push(redirect)
-         })
-         .catch((e) => setError(e.message))
-   }
+
    const handleCreateUser = (e) => {
       e.preventDefault()
       if (pass.length < 6) {
          setError('Password must be more than 6 characters')
          return
       }
-      createNewUser({ email, pass })
-         .then((result) => {
-            setUserName(name)
-            // setUser(result.user)
-            // console.log(users)
-         })
-         .catch((e) => setError(e.message))
+      createNewUser({ email, pass }).then(() => {setUserName(name,history)})
    }
+
    const handleGoogleLogin = () => {
       signInUsingGoogle()
          .then((result) => {
