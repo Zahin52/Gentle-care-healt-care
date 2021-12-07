@@ -9,8 +9,8 @@ export default function selctionContainer({ sectionTitle, data, cardType }) {
          <div>
             <div className="container">
                <h1
-                  style={{ 'background-color': '#fc6c85' }}
-                  className="title fw-bold text-capitalize mt-5 mb-4 text-center rounded-pill text-white py-2 opacity-75"
+                 
+                  className="title fw-bold text-capitalize mt-5 mb-4 text-center rounded-pill text-secondary py-2 opacity-75"
                >
                   {sectionTitle}
                </h1>
@@ -30,8 +30,8 @@ export default function selctionContainer({ sectionTitle, data, cardType }) {
          <div>
             <div className="container">
                <h1
-                  style={{ 'background-color': '#fc6c85' }}
-                  className="title fw-bold text-capitalize mt-5 mb-4 text-center rounded-pill text-white py-2 opacity-75"
+                 
+                  className="title fw-bold text-capitalize mt-5 mb-4 text-center rounded-pill text-secondary py-2 opacity-75"
                >
                   {sectionTitle}
                </h1>
@@ -51,8 +51,8 @@ export default function selctionContainer({ sectionTitle, data, cardType }) {
          <div>
             <div className="container">
                <h1
-                  style={{ 'background-color': '#fc6c85' }}
-                  className="title fw-bold text-capitalize mt-5 mb-4 text-center rounded-pill text-white py-2 opacity-75"
+                  
+                  className="title fw-bold text-capitalize mt-5 mb-4 text-center rounded-pill text-secondary py-2 opacity-75"
                >
                   {sectionTitle}
                </h1>

@@ -31,8 +31,11 @@ export default function Login() {
       console.log({ email, pass })
    }
    return (
-      <div className=" mx-auto">
-         <div className="d-flex justify-content-center">
+      <div
+         className=" mx-auto d-flex justify-content-center align-items-center"
+         style={{ minHeight: 'calc(100vh - 70px)' }}
+      >
+         <div className="d-flex justify-content-center align-items-center">
             <div className=" d-flex justify-content-center ">
                <div className="card w-100">
                   <form className="box w-100">

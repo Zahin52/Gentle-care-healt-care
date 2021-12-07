@@ -11,9 +11,9 @@ export default function Header() {
          className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark "
          style={{ opacity: '.7' }}
       >
-         <div className="container">
+         <div className="container-fluid mx-1 mx-md-4">
             <NavHashLink
-               className="navbar-brand border rounded-pill px-4 py-2"
+               className="navbar-brand border rounded-pill px-4  py-2"
                to="/"
             >
                Gentle-Care

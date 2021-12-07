@@ -23,12 +23,12 @@ export default function Home() {
    return (
       <div>
          <div className="banner ">
-            <div className="heading d-flex justify-content-center align-items-center flex-column">
-               <h1 className="text-capitalize text-center">
+            <div className="heading d-flex justify-content-center align-items-center flex-column ">
+               <h1 className="text-capitalize text-center fw-bold">
                   Welcome to the Gentle Care
                </h1>
-               <p className="text-capitalize text-center">
-                  Your Health care develompemt home
+               <p className="text-capitalize text-center fw-bold">
+                  Your Health care development home
                </p>
             </div>
          </div>
